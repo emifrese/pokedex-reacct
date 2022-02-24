@@ -5,9 +5,264 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-image: url('../src/assets/background.png');
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: 'digital_dream';
+  src: local('digital_dream'), url(./fonts/DIGITALDREAMSKEWNARROW-webfont.ttf) format('truetype');
+}
+
+@tailwind utilities;
+
+
+
+@layer components {
+  .pokedex {
+    @apply w-[750px] h-[500px]
+  }
+  .left {
+    @apply relative float-left bg-red h-[500px] w-[400px] rounded-t-[30px] rounded-b-[30px] shadow-[-10px_8px_1px_3px_rgba(141,0,0,1)]
+  }
+  .top-left {
+    @apply absolute z-20 w-[350px] h-[75px] bg-burgundy rounded-t-[30px]
+  }
+  .top-left1 {
+    @apply absolute z-[110] mt-0 mr-auto mb-auto ml-0 bg-burgundy w-[230px] h-[100px] rounded-br-[100px] rounded-tl-[30px] shadow-[-10px_8px_1px_3px_rgba(90,0,0,1)]
+  }
+  .top-left2 {
+    @apply absolute z-[100] mt-[50px] mr-auto mb-auto ml-[150px] bg-red w-[200px] h-[200px] rounded-tl-[120px] 
+  }
+  .logo {
+    @apply absolute z-[130] mt-[200px] mr-auto mb-auto ml-[30px]
+  }
+  .glass-button {
+    @apply absolute z-[110] mt-[17px] mr-auto mb-auto ml-[17px] w-[60px] h-[60px] bg-gradient-radial from-turquoise to-dark-turquoise rounded-[50px] border-solid border-white border-[5px] shadow-[0_0_6px_4px_rgba(141,0,0,1)]
+  }
+  .reflect {
+    @apply absolute z-[120] mt-1 mr-auto mb-auto ml-[10px] w-[30px] h-[17px] bg-sky rounded-tl-[20px] rounded-br-[20px] rounded-tr-[15px] rounded-bl-[15px]
+  }
+  .top-buttons {
+    @apply flex justify-between w-[85px] mt-3 mr-auto mb-auto ml-[100px]
+  }
+  .top-button {
+    @apply z-[120] w-5 h-5 rounded-[50px] shadow-[0_0_6px_2px_rgba(141,0,0,1)]
+  }
+  .top-button.red {
+    @apply bg-gradient-radial from-light-red to-red
+  }
+  .top-button.yellow {
+    @apply bg-gradient-radial from-light-yellow to-yellow
+  }
+  .top-button.green {
+    @apply bg-gradient-radial from-light-green to-green
+  }
+  .border-screen {
+    @apply absolute z-[100] mt-[135px] mr-auto mb-auto ml-[25px] bg-grey w-[300px] h-[220px] rounded-[20px]
+  }
+  .screen {
+    @apply absolute flex justify-center items-center z-[110] mt-[155px] mr-auto mb-auto ml-[45px] w-[255px] h-[140px] rounded-[20px] border-solid border-4 border-charcoal bg-white
+  }
+  .screen img {
+    @apply h-[130px] w-auto rounded-[15px]
+  }
+  .triangle {
+    @apply absolute z-[120] mt-[315px] mr-auto mb-auto ml-[25px] w-0 h-0 border-solid border-t-[40px] border-r-0 border-b-0 border-l-[40px] border-t-transparent border-l-red
+  }
+  .button-top {
+    @apply absolute z-[110] mt-1 mr-auto mb-auto ml-[130px] bg-gradient-radial from-light-red to-red rounded-[100px] border-solid border-black border-[1px] h-[10px] w-[10px]
+  }
+  .button-top.first {
+    @apply ml-[130px] 
+  }
+  .button-top.second {
+    @apply ml-[160px]
+  }
+  .button-bottom {
+    @apply absolute z-[130] mt-[178px] mr-auto mb-auto ml-[50px] rounded-[100px] h-[30px] w-[30px] shadow-[0_1px_0_1px_rgba(141,0,0,1)] cursor-pointer bg-gradient-to-b from-red to-burgundy
+  }
+  .button-bottom:active {
+    @apply shadow-none bg-gradient-to-b from-[#5a0000] to-red shadow-red-button border-black border-solid border-[1px]
+  }
+  .border-screen p {
+    @apply mt-[120px] mr-auto mb-auto ml-[180px] text-[80px] text-charcoal font-extralight
+  }
+  .blue-button-left {
+    @apply bg-gradient-to-b from-blue to-dark-blue absolute z-[130] mt-[385px] mr-auto mb-auto ml-[20px] h-[55px] w-[55px] shadow-[0_1px_0_1px_rgba(0,0,178,1)] cursor-pointer rounded-[100px]
+  }
+  .blue-button-left:active {
+    @apply shadow-none bg-gradient-to-b from-[#00007F] to-blue shadow-blue-button border-black border-solid border-[1px]
+  }
+  .green-button-left {
+    @apply bg-gradient-to-b from-green to-dark-green absolute z-[130] m-[400px] mr-auto mb-auto ml-[100px] rounded-[100px] h-3 w-[50px] shadow-[-1px_1px_0_1px_rgba(0,80,0,1)] cursor-pointer
+  }
+  .green-button-left:active {
+    @apply shadow-none bg-gradient-to-b from-[#001000] to-green shadow-green-button border-[#002A00] border-solid border-[1px]
+  }
+  .orange-button-left {
+    @apply bg-gradient-to-b from-orange to-dark-orange absolute z-[130] mt-[400px] mr-auto mb-auto ml-[165px] rounded-[100px] h-3 w-[50px] shadow-[-1px_1px_0_1px_rgba(157,19,0,1)] cursor-pointer
+  }
+  .orange-button-left:active {
+    @apply shadow-none bg-gradient-to-b from-[#C33900] to-orange shadow-orange-button border-[#900600] border-solid border-[1px]
+  }
+  .square-button-left {
+    @apply absolute z-[130] mt-[430px] mr-auto mb-auto ml-[100px] rounded-[10px] h-[55px] w-[115px] shadow-square-button shadow-[0_0_5px_1px_rgba(141,0,0,1)] bg-light-leaf-green bg-gradient-to-b from-light-leaf-green to-leaf-green
+  }
+  .square-button-left input {
+    @apply mt-[9px] mr-auto mb-auto ml-[20px] w-[72px] h-[35px] rounded-[10px] text-[20px] text-center shadow-input border-solid border-black border-[1px] text-black font-sans
+  }
+  .cross {
+    @apply absolute z-[130] h-[90px] w-[90px] mt-[390px] mr-auto mb-auto ml-[240px]
+  }
+  .cross-buttons {
+    @apply absolute bg-black mr-auto mb-auto w-[30px] h-[30px] shadow-[-3px_2px_rgba(17,17,17,1)] 
+  }
+  .cross-buttons.midB {
+    @apply z-[130] mt-[30px] ml-[30px] rounded-none
+  }
+  .cross-buttons.topB {
+    @apply flex mt-0 ml-[30px] rounded-tr-[5px] rounded-tl-[5px] cursor-pointer
+  }
+  .cross-buttons.rightB {
+    @apply mt-[30px] ml-[60px] rounded-tr-[5px] rounded-br-[5px]
+  }
+  .cross-buttons.botB {
+    @apply flex z-[130] mt-[60px] ml-[30px] rounded-bl-[5px] rounded-br-[5px] cursor-pointer
+  }
+  .cross-buttons.leftB {
+    @apply z-[130] mt-[30px] ml-0 rounded-bl-[5px] rounded-tl-[5px]
+  }
+  .mid-circle {
+    @apply absolute mt-[5px] mr-auto mb-auto ml-[3px] w-[22px] h-[22px] rounded-[30px] bg-gradient-radial from-dark-black to-black
+  }
+  .upC {
+    @apply absolute mt-2 mr-auto mb-auto ml-1 w-0 h-0 border-solid border-[10px] border-t-0 border-transparent border-b-dark-black
+  }
+  .rightC {
+    @apply absolute mt-[6px] mr-auto mb-auto ml-[10px] w-0 h-0 border-solid border-[10px] border-r-0 border-transparent border-l-dark-black
+  }
+  .downC {
+    @apply absolute mt-[14px] mr-auto mb-auto ml-1 w-0 h-0 border-solid border-[10px] border-b-0 border-transparent border-t-dark-black
+  }
+  .leftC {
+    @apply absolute mt-1.5 mr-auto mb-auto ml-[7px] w-0 h-0 border-solid border-[10px] border-l-0 border-transparent border-r-dark-black
+  }
+  .middle {
+    @apply absolute z-[150] ml-[350px] h-[500px] w-[50px] bg-gradient-to-r from-burgundy to-red shadow-[0_5px_5px_3px_rgba(141,0,0,1)]
+  }
+  .midHinge {
+    @apply absolute z-[20] w-[50px] h-[46px] bg-gradient-to-r from-dark-red via-red to-dark-red border-y-2 border-y-dark-red
+  }
+  .hinge1 {
+     
+  }
+  .midHinge.hinge2 {
+    @apply mt-[100px] 
+  }
+  .midHinge.hinge3 {
+    @apply mt-[400px] 
+  }
+  .right {
+    @apply relative float-right mt-[75px] bg-red h-[425px] w-[350px] rounded-br-[30px] shadow-[-10px_8px_1px_3px_rgba(141,0,0,1)] 
+  }
+  .info-screen {
+    @apply flex justify-center items-center absolute z-[130] mt-[60px] mr-auto mb-auto ml-[30px] rounded-[10px] h-[120px] w-[290px] shadow-info-screen shadow-[0_0_5px_1px_rgba(141,0,0,1)] bg-green text-[#066900] bg-gradient-to-b from-light-green to-green font-sans
+  }
+  .info-screen p {
+    @apply text-lg
+  }
+  .keyboard { 
+    @apply absolute justify-between items-center flex flex-wrap h-[75px] w-[250px] mt-[200px] mr-auto mb-auto ml-[50px]
+  }
+  .key {
+    @apply bg-gradient-to-b from-blue to-dark-blue z-[100] h-[35px] w-[47px] rounded-[4px] shadow-[-1px_1px_0_2px_rgba(0,30,160,1)] cursor-pointer 
+  }
+  .key:active {
+    @apply bg-gradient-to-b from-[#001193] to-blue shadow-key shadow-[-1px_1px_0px_2px_rgba(0,30,160,1)]
+  }
+  .right-buttons {
+    @apply absolute z-[130] mt-[300px] mr-auto mb-auto rounded-[100px] h-3 cursor-pointer
+  }
+  .right-buttons.leafB {
+    @apply bg-gradient-to-b from-light-leaf-green to-leaf-green ml-[51px] w-3 shadow-[-1px_1px_0px_1px_rgba(0,54,52,1)]
+  }
+  .right-buttons.leafB:active {
+    @apply shadow-none bg-gradient-to-b from-[#001513] to-light-leaf-green shadow-leaf-button border-[#005e51] border-solid border-[1px]
+  }
+  .right-buttons.yellowB {
+    @apply bg-gradient-to-b from-yellow to-dark-yellow ml-[80px] w-3 shadow-[-1px_1px_0px_1px_rgba(166,82,0,1)]
+  }
+  .right-buttons.yellowB:active {
+    @apply shadow-none bg-gradient-to-b from-[#CC7800] to-yellow shadow-yellow-button border-[#993500] border-solid border-[1px]
+  }
+  .right-buttons.greenB {
+    @apply bg-gradient-to-b from-green to-dark-green ml-[185px] w-[50px] shadow-[-1px_1px_0px_1px_rgba(0,80,0,1)]
+  }
+  .right-buttons.greenB:active {
+    @apply shadow-none bg-gradient-to-b from-[#007400] to-green shadow-green-button-right border-[#008E00] border-solid border-[1px]
+  }
+  .right-buttons.orangeB {
+    @apply bg-gradient-to-b from-orange to-dark-orange ml-[250px] w-[50px] shadow-[-1px_1px_0px_1px_rgba(157,19,0,1)]
+  }
+  .right-buttons.orangeB:active {
+    @apply shadow-none bg-gradient-to-b from-[#C33900] to-orange shadow-orange-button-right border-[#900600] border-solid border-[1px]
+  }
+  .arrow-button {
+    @apply bg-gradient-to-b from-grey to-charcoal absolute z-[100] mt-[330px] mr-auto mb-auto h-[30px] w-10 shadow-[-1px_1px_0_2px_rgba(48,48,48,1)] cursor-pointer 
+  }
+  .arrow-button.leftA {
+    @apply ml-[51px] rounded-tl-[5px] rounded-bl-[5px] 
+  }
+  .leftA:active, .rightA:active {
+    @apply shadow-none bg-gradient-to-b from-[#313131] to-grey shadow-left-button border-[#313131] border-solid border-[1px]
+  }
+  .arrow-button.rightA {
+    @apply ml-[92px] rounded-tr-[5px] rounded-br-[5px]
+  }
+  .arrowT {
+    @apply absolute z-[130] mt-[5px] mr-auto mb-auto w-0 h-0 border-solid border-[10px] border-transparent
+  }
+  .arrowT.rightT {
+    @apply ml-4 border-r-0 border-l-[#9A0000]
+  }
+  .arrowT.leftT {
+    @apply ml-3 border-l-0 border-r-[#9A0000]
+  }
+  .lastA {
+    @apply absolute bg-gradient-to-b from-light-yellow to-dark-yellow z-[130] mt-[330px] mr-auto mb-auto ml-[270px] rounded-[100px] w-[30px] h-[30px] shadow-[-1px_1px_0px_1px_rgba(153,69,0,1)] cursor-pointer
+  }
+  .lastA:active {
+    @apply shadow-none bg-gradient-to-b from-[#C33900] to-yellow shadow-last-button border-[#8C2800] border-solid border-[1px] 
+  }
+  .left-red-arrow {
+    @apply absolute z-[130] mt-[7px] mr-auto mb-auto ml-[5px] w-0 h-0 border-solid border-t-8 border-r-[15px] border-b-8 border-l-0 border-transparent border-r-[#9A0000]
+  }
+  .square-button {
+    @apply absolute z-[130] mt-[375px] mr-auto mb-auto rounded-[10px] h-10 w-[100px] shadow-square-bottom-button shadow-[0_0_5px_1px_rgba(141,0,0,1)] bg-dark-sun bg-gradient-to-b from-yellow to-dark-sun
+  }
+  .right1 {
+    @apply ml-[185px]
+  }
+  .right2 {
+    @apply ml-[70px]
+  }
+  .top-right1 {
+    @apply absolute z-[100] mt-[50px] mr-auto mb-auto ml-[400px] bg-red w-[200px] h-[200px] rounded-tr-[120px]
+  }
+  .top-right2 {
+    @apply absolute z-[100] mt-0 mr-auto mb-auto ml-[520px] bg-[#D1E6FA] w-[230px] h-[100px] rounded-bl-[100px]
+  }
+}
+
