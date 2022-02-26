@@ -1,24 +1,27 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment } from "react";
+import { useSelector } from "react-redux";
 import {useSpeechSynthesis} from 'react-speech-kit';
 
 const Right = (props) => {
 
-  const [pokeName, setPokeName] = useState();
-
-  useEffect(() => {
-    if(props.data !== null) {
-      setPokeName(props.data.name)
-    }
-  }, [props.data])
+  const pokeState = useSelector(state => state.poke);
 
   const { speak } = useSpeechSynthesis();
+
+  let pokeName;
+
+  pokeName ='';
+  
+  if(Object.keys(pokeState.data).length !== 0) {
+    pokeName = pokeState.data.name
+  }
   
 
   return (
     <Fragment>
       <div className="right">
         <div className="info-screen">
-          {pokeName && <p>{pokeName}</p>}
+          {Object.keys(pokeState.data).length !== 0 && <p>{pokeName}</p>}
         </div>
         <div className="keyboard">
           <button className="key" onClick={() => speak({text: pokeName})}></button>
