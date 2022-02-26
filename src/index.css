@@ -127,19 +127,19 @@ code {
     @apply absolute z-[130] h-[90px] w-[90px] mt-[390px] mr-auto mb-auto ml-[240px]
   }
   .cross-buttons {
-    @apply absolute bg-black mr-auto mb-auto w-[30px] h-[30px] shadow-[-3px_2px_rgba(17,17,17,1)] 
+    @apply absolute bg-black mr-auto mb-auto w-[30px] h-[30px] shadow-[-3px_2px_rgba(17,17,17,1)] cursor-pointer
   }
   .cross-buttons.midB {
     @apply z-[130] mt-[30px] ml-[30px] rounded-none
   }
   .cross-buttons.topB {
-    @apply flex mt-0 ml-[30px] rounded-tr-[5px] rounded-tl-[5px] cursor-pointer
+    @apply flex mt-0 ml-[30px] rounded-tr-[5px] rounded-tl-[5px] 
   }
   .cross-buttons.rightB {
     @apply mt-[30px] ml-[60px] rounded-tr-[5px] rounded-br-[5px]
   }
   .cross-buttons.botB {
-    @apply flex z-[130] mt-[60px] ml-[30px] rounded-bl-[5px] rounded-br-[5px] cursor-pointer
+    @apply flex z-[130] mt-[60px] ml-[30px] rounded-bl-[5px] rounded-br-[5px] 
   }
   .cross-buttons.leftB {
     @apply z-[130] mt-[30px] ml-0 rounded-bl-[5px] rounded-tl-[5px]

@@ -14,7 +14,8 @@ const pokeSlice = createSlice({
         },
         change(state, action) {
             switch (action.payload) {
-                case 'add1': 
+                case 'add1':
+                    if(state.pokeNum < 898)
                     state.pokeNum++
                     break;
                 case 'rem1':
@@ -23,6 +24,7 @@ const pokeSlice = createSlice({
                     }
                     break;
                 case 'plus10':
+                    if(state.pokeNum < 879)
                     state.pokeNum += 10
                     break;
                 case 'min10':
