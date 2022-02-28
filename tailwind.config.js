@@ -31,6 +31,9 @@ module.exports = {
       "dark-black": "#111111",
     },
     extend: {
+      screens: {
+        'mdm': {'max': '767px'},
+      },
       fontFamily: {
         'sans': ['digital_dream', 'Helvetica', 'Arial', 'sans-serif']
       },

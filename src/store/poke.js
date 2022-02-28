@@ -12,6 +12,11 @@ const pokeSlice = createSlice({
         updateState(state, action) {
             state.data = action.payload
         },
+        inputChange(state, action) {
+            if(action.payload > 0 && action.payload < 899) {
+                state.pokeNum = action.payload
+            }
+        },
         change(state, action) {
             switch (action.payload) {
                 case 'add1':

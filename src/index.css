@@ -30,6 +30,9 @@ code {
 
 
 @layer components {
+  .pokedex > div{
+    @apply mdm:hidden
+  }
   .pokedex {
     @apply w-[750px] h-[500px]
   }
@@ -37,7 +40,7 @@ code {
     @apply relative float-left bg-red h-[500px] w-[400px] rounded-t-[30px] rounded-b-[30px] shadow-[-10px_8px_1px_3px_rgba(141,0,0,1)]
   }
   .top-left {
-    @apply absolute z-20 w-[350px] h-[75px] bg-burgundy rounded-t-[30px]
+    @apply absolute z-20 w-[350px] h-[75px] bg-burgundy rounded-tl-[30px]
   }
   .top-left1 {
     @apply absolute z-[110] mt-0 mr-auto mb-auto ml-0 bg-burgundy w-[230px] h-[100px] rounded-br-[100px] rounded-tl-[30px] shadow-[-10px_8px_1px_3px_rgba(90,0,0,1)]
@@ -46,7 +49,7 @@ code {
     @apply absolute z-[100] mt-[50px] mr-auto mb-auto ml-[150px] bg-red w-[200px] h-[200px] rounded-tl-[120px] 
   }
   .logo {
-    @apply absolute z-[130] mt-[200px] mr-auto mb-auto ml-[30px]
+    @apply md:hidden absolute z-[130] mt-[200px] mr-auto mb-auto ml-[30px]
   }
   .glass-button {
     @apply absolute z-[110] mt-[17px] mr-auto mb-auto ml-[17px] w-[60px] h-[60px] bg-gradient-radial from-turquoise to-dark-turquoise rounded-[50px] border-solid border-white border-[5px] shadow-[0_0_6px_4px_rgba(141,0,0,1)]
@@ -76,7 +79,7 @@ code {
     @apply absolute flex justify-center items-center z-[110] mt-[155px] mr-auto mb-auto ml-[45px] w-[255px] h-[140px] rounded-[20px] border-solid border-4 border-charcoal bg-white
   }
   .screen img {
-    @apply h-[130px] w-auto rounded-[15px]
+    @apply h-[180px] w-auto rounded-[15px]
   }
   .triangle {
     @apply absolute z-[120] mt-[315px] mr-auto mb-auto ml-[25px] w-0 h-0 border-solid border-t-[40px] border-r-0 border-b-0 border-l-[40px] border-t-transparent border-l-red
@@ -164,9 +167,6 @@ code {
   }
   .midHinge {
     @apply absolute z-[20] w-[50px] h-[46px] bg-gradient-to-r from-dark-red via-red to-dark-red border-y-2 border-y-dark-red
-  }
-  .hinge1 {
-     
   }
   .midHinge.hinge2 {
     @apply mt-[100px] 

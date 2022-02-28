@@ -36,6 +36,10 @@ const DownLeft = (props) => {
     dispatch(pokeActions.updateState(data))
   }
 
+  const changeInputPokeNum = (e) => {
+    dispatch(pokeActions.inputChange(e.target.value))
+  }
+
   return (
     <Fragment>
       <div className="blue-button-left"></div>
@@ -47,8 +51,7 @@ const DownLeft = (props) => {
           type="text"
           name="howmuch"
           value={pokeState.pokeNum}
-          readOnly
-          // onChange={setPokeNum}
+          onChange={changeInputPokeNum}
         />
       </div>
       <div className="cross">
