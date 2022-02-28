@@ -79,7 +79,7 @@ code {
     @apply absolute flex justify-center items-center z-[110] mt-[155px] mr-auto mb-auto ml-[45px] w-[255px] h-[140px] rounded-[20px] border-solid border-4 border-charcoal bg-white
   }
   .screen img {
-    @apply h-[180px] w-auto rounded-[15px]
+    @apply h-[150px] w-auto rounded-[15px]
   }
   .triangle {
     @apply absolute z-[120] mt-[315px] mr-auto mb-auto ml-[25px] w-0 h-0 border-solid border-t-[40px] border-r-0 border-b-0 border-l-[40px] border-t-transparent border-l-red
