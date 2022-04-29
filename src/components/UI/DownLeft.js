@@ -59,14 +59,12 @@ const DownLeft = (props) => {
           <div className="mid-circle"></div>
         </div>
         <button className="cross-buttons topB" onClick={increaseNumPokeHandler}>
-          {/* onclick="increaseIdPokemon()" */}
           <div className="upC"></div>
         </button>
         <div className="cross-buttons rightB" onClick={inc10NumPokeHandler}>
           <div className="rightC"></div>
         </div>
         <button className="cross-buttons botB" onClick={decreaseNumPokeHandler}>
-          {/* onclick="decreaseIdPokemon()" */}
           <div className="downC"></div>
         </button>
         <div className="cross-buttons leftB" onClick={dec10NumPokeHandler}>
